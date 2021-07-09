@@ -31,8 +31,8 @@ void setupCoodinates() {
 }
 
 void drawMinorCircle(float x, float y) { //teste
-  translate(x,y,2.5);
-  rotateX(radians(90));
+  translate(x+2.5,y,-5);
+  rotateX(radians(180));
   rotateY(radians(90));
   circle(Xcirculo,Ycirculo,5); //iniciando círculo menor
 }
@@ -47,8 +47,10 @@ void draw() {
   point(0,0,1);
   
   pushMatrix();
+  fill(255);
   circle(0,0,20); //círculo maior
   rotate(alphaC);
+  noFill();
   
   drawMinorCircle(Xcirculo,Ycirculo);
   //circle(Xcirculo,Ycirculo,5); //iniciando círculo menor
